@@ -2,11 +2,22 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 
-const focusAreas = [
-  "Embedded ML",
-  "Edge AI",
-  "Federated Learning",
-  "Local AI Systems",
+const capabilities = [
+  {
+    title: "Applied Machine Learning Systems",
+    description:
+      "Development of machine learning systems for technical data, prediction, analysis and intelligent applications.",
+  },
+  {
+    title: "Edge, Cloud & Distributed AI",
+    description:
+      "AI systems across edge devices, cloud environments and distributed intelligent infrastructures.",
+  },
+  {
+    title: "Intelligent Technical Applications",
+    description:
+      "Design and development of deployable AI applications for real-world and technical environments.",
+  },
 ];
 ---
 
@@ -20,22 +31,55 @@ const focusAreas = [
       </p>
 
       <h1 class="max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
-        Edge AI, Embedded ML and Intelligent Systems.
+        Intelligent AI systems for real-world technical environments.
       </h1>
 
       <p class="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
-        Building efficient AI systems for constrained and real-world
-        environments.
+        We develop applied machine learning systems for edge devices,
+        technical data, and privacy-aware intelligent applications.
       </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          href="#capabilities"
+          class="rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-zinc-200"
+        >
+          Explore Capabilities
+        </a>
+
+        <a
+          href="#projects"
+          class="rounded-full border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-300 transition hover:border-zinc-500 hover:text-white"
+        >
+          View Projects
+        </a>
+      </div>
     </section>
 
-    <section id="focus" class="mx-auto max-w-6xl px-6 py-16">
-      <h2 class="text-2xl font-semibold">Focus Areas</h2>
+    <section id="capabilities" class="mx-auto max-w-6xl px-6 py-16">
+      <div class="max-w-2xl">
+        <p class="text-sm uppercase tracking-[0.2em] text-zinc-500">
+          Capabilities
+        </p>
 
-      <div class="mt-8 grid gap-4 md:grid-cols-4">
-        {focusAreas.map((area) => (
-          <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
-            <h3 class="font-medium">{area}</h3>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight">
+          Building intelligent systems across software, data and real-world environments.
+        </h2>
+
+        <p class="mt-4 text-zinc-400">
+          Embedded Intelligence Lab develops applied AI systems combining
+          machine learning, distributed architectures and deployable intelligent applications.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-5 md:grid-cols-3">
+        {capabilities.map((capability) => (
+          <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-8">
+            <h3 class="text-lg font-semibold">{capability.title}</h3>
+
+            <p class="mt-4 leading-relaxed text-zinc-400">
+              {capability.description}
+            </p>
           </div>
         ))}
       </div>
@@ -43,23 +87,48 @@ const focusAreas = [
 
     <section id="projects" class="mx-auto max-w-6xl px-6 py-16">
       <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-8">
-        <h2 class="text-2xl font-semibold">Projects coming soon.</h2>
+        <p class="text-sm uppercase tracking-[0.2em] text-zinc-500">
+          Projects
+        </p>
 
-        <p class="mt-4 max-w-2xl text-zinc-400">
-          Currently building experimental edge AI and embedded ML systems.
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight">
+          Experimental systems and applied AI projects.
+        </h2>
+
+        <p class="mt-4 max-w-2xl leading-relaxed text-zinc-400">
+          Currently building intelligent systems focused on edge AI,
+          embedded machine learning, technical data processing and
+          deployable AI architectures.
         </p>
       </div>
     </section>
 
     <section id="contact" class="mx-auto max-w-6xl px-6 py-16">
-      <h2 class="text-2xl font-semibold">Contact</h2>
+      <div class="border-t border-zinc-800 pt-12">
+        <p class="text-sm uppercase tracking-[0.2em] text-zinc-500">
+          Contact
+        </p>
 
-      <div class="mt-6 flex flex-wrap gap-4 text-zinc-400">
-        <a href="https://github.com/" class="hover:text-white">GitHub</a>
-        <a href="https://linkedin.com/" class="hover:text-white">LinkedIn</a>
-        <a href="mailto:contact@embeddedintelligencelab.com" class="hover:text-white">
-          Mail
-        </a>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight">
+          Let’s build intelligent systems.
+        </h2>
+
+        <div class="mt-8 flex flex-wrap gap-6 text-zinc-400">
+          <a href="https://github.com/" class="transition hover:text-white">
+            GitHub
+          </a>
+
+          <a href="https://linkedin.com/" class="transition hover:text-white">
+            LinkedIn
+          </a>
+
+          <a
+            href="mailto:contact@embeddedintelligencelab.com"
+            class="transition hover:text-white"
+          >
+            contact@embeddedintelligencelab.com
+          </a>
+        </div>
       </div>
     </section>
   </main>
